@@ -9,7 +9,7 @@ Backend: Express, Node, Prisma ORM (PostgreSQL)
 
 Frontend: React
 
-Testing: Vitest for react;
+Testing: Vitest, react-testing-library and jest-dom for react;
 
 How to build and run it locally (and possibly a link to a demo)
 
