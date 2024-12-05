@@ -5,8 +5,9 @@ import styles from './stylesheets/App.module.css';
 function App() {
 	return (
 		<>
-			<h1>Hello world</h1>
-			<img src={image1} alt="Example Image" className={styles.image1} />
+			<div className={styles.container}>
+				<img src={image1} alt="Example Image" className={styles.image1} />
+			</div>
 		</>
 	);
 }
