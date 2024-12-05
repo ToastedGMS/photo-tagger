@@ -1,0 +1,9 @@
+* {
+	cursor: url('https://cdn.custom-cursor.com/db/9958/32/minimal-pokeball-cursor.png'),
+		auto;
+}
+
+.image1:hover {
+	cursor: url('https://cdn.custom-cursor.com/db/9957/32/minimal-pokeball-pointer.png '),
+		auto;
+}
