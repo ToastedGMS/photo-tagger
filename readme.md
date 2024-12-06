@@ -20,3 +20,8 @@ Then optionally:
 What I learned
 
 What is still to do
+
+Special thanks to SHUBHAM from ShuDoCode for helping me with the image map logic, you're the GOAT!
+(His YT channel: https://www.youtube.com/@shudocode)
+And to David J Brad Shaw for the image map resizer npm package, you're also the GOAT!
+(Repo: https://github.com/davidjbradshaw/image-map-resizer)
