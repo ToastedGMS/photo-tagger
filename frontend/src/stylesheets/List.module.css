@@ -1,0 +1,24 @@
+.listDiv {
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin-right: 2em;
+	margin-top: 2em;
+	background-color: blue;
+	border-radius: 15px;
+	z-index: 999;
+}
+
+.listDiv > ul {
+	list-style-type: none;
+	margin-right: 1em;
+}
+
+.liDiv {
+	display: flex;
+	gap: 1rem;
+}
+
+.liDiv > input {
+	pointer-events: none;
+}

@@ -3,6 +3,7 @@ import image1 from './public/image1.jpeg';
 import styles from './stylesheets/App.module.css';
 import imageMapResize from 'image-map-resizer';
 import StartModal from './StartModal';
+import List from './List';
 
 function App() {
 	useEffect(() => {
@@ -10,6 +11,7 @@ function App() {
 	}, []);
 
 	const [isModalOpen, setIsModalOpen] = useState(true);
+	const [isChecked, setIsChecked] = useState(false);
 
 	return (
 		<>
@@ -19,6 +21,8 @@ function App() {
 					setIsModalOpen(false);
 				}}
 			/>
+
+			<List open={isModalOpen} charmander={isChecked} />
 			<div className={styles.container}>
 				<img
 					src={image1}
@@ -33,7 +37,7 @@ function App() {
 						title="Charmander"
 						className={styles.pokemon}
 						onClick={() => {
-							console.log('Charmander');
+							setIsChecked(true);
 						}}
 					/>
 				</map>
