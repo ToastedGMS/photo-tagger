@@ -41,7 +41,7 @@
 	border-radius: 15px;
 	border: none;
 	padding: 1em;
-	width: 50%;
+	min-width: 50%;
 	font-family: 'Courier New', Courier, monospace;
 }
 
