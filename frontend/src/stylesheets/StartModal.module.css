@@ -1,0 +1,60 @@
+@font-face {
+	font-family: pokemonSolid;
+	src: url('../assets/fonts/pokemon/pokemonSolid.ttf');
+}
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: blue;
+	padding: 2rem;
+	border-radius: 15px;
+	z-index: 999;
+	text-align: center;
+}
+
+.modal > * {
+	margin-top: 0;
+}
+
+.modal > h1 {
+	font-family: pokemonSolid;
+	color: yellow;
+	letter-spacing: 0.2rem;
+}
+
+.modal > p {
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.modal > .buttonDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttonDiv > button {
+	margin: 0.5em;
+	background-color: rgba(255, 255, 0, 0.795);
+	border-radius: 15px;
+	border: none;
+	padding: 1em;
+	width: 50%;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.buttonDiv > button:hover {
+	background-color: yellow;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.705);
+	z-index: 999;
+}
