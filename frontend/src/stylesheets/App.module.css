@@ -3,6 +3,10 @@
 		auto;
 }
 
+body {
+	margin: 0;
+}
+
 .image1 {
 	min-width: 40%;
 }
