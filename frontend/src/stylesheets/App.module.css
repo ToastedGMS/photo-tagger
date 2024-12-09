@@ -11,7 +11,7 @@ body {
 	min-width: 40%;
 }
 
-.pokemon:hover {
+area:hover {
 	cursor: url('https://cdn.custom-cursor.com/db/9957/32/minimal-pokeball-pointer.png'),
 		auto;
 }
@@ -41,4 +41,7 @@ body {
 .container > * {
 	position: relative;
 	z-index: 1;
+}
+
+@media (max-width: 1152px) {
 }
