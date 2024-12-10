@@ -18,31 +18,31 @@ export default function List({ open, checks }) {
 			<div className={style.listDiv}>
 				<ul>
 					<div className={style.liDiv}>
-						<input type="checkbox" checked={charmanderCheck} />
+						<input type="checkbox" checked={charmanderCheck} readOnly />
 						<li>Find Charmander</li>
 					</div>
 				</ul>
 				<ul>
 					<div className={style.liDiv}>
-						<input type="checkbox" checked={spearowCheck} />
+						<input type="checkbox" checked={spearowCheck} readOnly />
 						<li>Find Spearow</li>
 					</div>
 				</ul>
 				<ul>
 					<div className={style.liDiv}>
-						<input type="checkbox" checked={teddiursaCheck} />
+						<input type="checkbox" checked={teddiursaCheck} readOnly />
 						<li>Find Teddiursa</li>
 					</div>
 				</ul>
 				<ul>
 					<div className={style.liDiv}>
-						<input type="checkbox" checked={qwilfishCheck === 6} />
+						<input type="checkbox" checked={qwilfishCheck === 6} readOnly />
 						<li>Find all the Qwilfish ({qwilfishCheck} / 6)</li>
 					</div>
 				</ul>
 				<ul>
 					<div className={style.liDiv}>
-						<input type="checkbox" checked={caterpieCheck === 3} />
+						<input type="checkbox" checked={caterpieCheck === 3} readOnly />
 						<li>Find Caterpie and all it's evolutions</li>
 					</div>
 				</ul>
