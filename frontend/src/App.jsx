@@ -16,6 +16,7 @@ function App() {
 	const [teddiursaCheck, setTeddiursaCheck] = useState(false);
 	const [qwilfishCheck, setqwilfishCheck] = useState(0);
 	const [caterpieCheck, setCaterpieCheck] = useState(0);
+	const [checked, setChecked] = useState([]);
 
 	return (
 		<>
@@ -89,8 +90,12 @@ function App() {
 						shape="circle"
 						onClick={(e) => {
 							e.preventDefault();
-							setqwilfishCheck((prevstate) => prevstate + 1);
-							e.target.style.pointerEvents = none;
+							const id = 'Qwilfish1';
+
+							if (!checked.includes(id)) {
+								setqwilfishCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -102,7 +107,12 @@ function App() {
 						shape="circle"
 						onClick={(e) => {
 							e.preventDefault();
-							setqwilfishCheck((prevstate) => prevstate + 1);
+							const id = 'Qwilfish2';
+
+							if (!checked.includes(id)) {
+								setqwilfishCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -114,7 +124,12 @@ function App() {
 						shape="circle"
 						onClick={(e) => {
 							e.preventDefault();
-							setqwilfishCheck((prevstate) => prevstate + 1);
+							const id = 'Qwilfish3';
+
+							if (!checked.includes(id)) {
+								setqwilfishCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -126,7 +141,12 @@ function App() {
 						shape="circle"
 						onClick={(e) => {
 							e.preventDefault();
-							setqwilfishCheck((prevstate) => prevstate + 1);
+							const id = 'Qwilfish4';
+
+							if (!checked.includes(id)) {
+								setqwilfishCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -138,7 +158,12 @@ function App() {
 						shape="circle"
 						onClick={(e) => {
 							e.preventDefault();
-							setqwilfishCheck((prevstate) => prevstate + 1);
+							const id = 'Qwilfish5';
+
+							if (!checked.includes(id)) {
+								setqwilfishCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -150,7 +175,12 @@ function App() {
 						shape="circle"
 						onClick={(e) => {
 							e.preventDefault();
-							setqwilfishCheck((prevstate) => prevstate + 1);
+							const id = 'Qwilfish6';
+
+							if (!checked.includes(id)) {
+								setqwilfishCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -162,7 +192,12 @@ function App() {
 						shape="poly"
 						onClick={(e) => {
 							e.preventDefault();
-							setCaterpieCheck((prevstate) => prevstate + 1);
+							const id = 'Caterpie1';
+
+							if (!checked.includes(id)) {
+								setCaterpieCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -174,7 +209,12 @@ function App() {
 						shape="poly"
 						onClick={(e) => {
 							e.preventDefault();
-							setCaterpieCheck((prevstate) => prevstate + 1);
+							const id = 'Caterpie2';
+
+							if (!checked.includes(id)) {
+								setCaterpieCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 					<area
@@ -186,7 +226,12 @@ function App() {
 						shape="poly"
 						onClick={(e) => {
 							e.preventDefault();
-							setCaterpieCheck((prevstate) => prevstate + 1);
+							const id = 'Caterpie3';
+
+							if (!checked.includes(id)) {
+								setCaterpieCheck((prevstate) => prevstate + 1);
+								setChecked((prevstate) => [...prevstate, id]);
+							}
 						}}
 					/>
 				</map>
