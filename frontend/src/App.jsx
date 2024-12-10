@@ -5,6 +5,7 @@ import imageMapResize from 'image-map-resizer';
 import StartModal from './StartModal';
 import List from './List';
 import EndModal from './EndModal';
+import Timer from './Timer';
 
 function App() {
 	useEffect(() => {
@@ -19,6 +20,7 @@ function App() {
 	const [caterpieCheck, setCaterpieCheck] = useState(0);
 	const [endModalOpen, setEndModalOpen] = useState(false);
 	const [checked, setChecked] = useState([]);
+	const [totalTime, setTotalTime] = useState(null);
 
 	useEffect(() => {
 		if (
@@ -38,8 +40,17 @@ function App() {
 		caterpieCheck,
 	]);
 
+	useEffect(() => {
+		console.log('totalTime:', totalTime);
+	}, [totalTime]);
+
 	return (
 		<>
+			<Timer
+				startModalOpen={isModalOpen}
+				endModalOpen={endModalOpen}
+				setTotalTime={setTotalTime}
+			/>
 			<StartModal
 				open={isModalOpen}
 				closeModal={() => {
@@ -58,7 +69,7 @@ function App() {
 				}}
 			/>
 
-			<EndModal open={endModalOpen} />
+			<EndModal open={endModalOpen} totalTime={totalTime} />
 			<div className={styles.container}>
 				<img
 					src={image1}

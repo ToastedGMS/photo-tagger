@@ -1,0 +1,23 @@
+.timerDiv {
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin-left: 2em;
+	margin-top: 2em;
+	background-color: blue;
+	border-radius: 15px;
+	z-index: 900;
+	padding: 1rem;
+	max-height: fit-content;
+	font-size: 2em;
+}
+
+@media (max-width: 1152px) {
+	.timerDiv {
+		top: 0;
+		right: 0;
+		left: auto;
+		z-index: 1000;
+		background-color: transparent;
+	}
+}
