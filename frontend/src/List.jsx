@@ -43,7 +43,7 @@ export default function List({ open, checks }) {
 				<ul>
 					<div className={style.liDiv}>
 						<input type="checkbox" checked={caterpieCheck === 3} readOnly />
-						<li>Find Caterpie and all it's evolutions</li>
+						<li>Find Caterpie and all it's evolutions ({caterpieCheck} / 3)</li>
 					</div>
 				</ul>
 			</div>
