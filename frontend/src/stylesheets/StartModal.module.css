@@ -29,6 +29,13 @@
 	font-family: 'Courier New', Courier, monospace;
 }
 
+@media (max-width: 1152px) {
+	.modal > p {
+		font-weight: bold;
+		color: white;
+	}
+}
+
 .modal > .buttonDiv {
 	display: flex;
 	flex-direction: column;
