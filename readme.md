@@ -25,3 +25,4 @@ Special thanks to SHUBHAM from ShuDoCode for helping me with the image map logic
 (His YT channel: https://www.youtube.com/@shudocode)
 And to David J Brad Shaw for the image map resizer npm package, you're also the GOAT!
 (Repo: https://github.com/davidjbradshaw/image-map-resizer)
+Timer logic is handled by react-timer-hook (https://www.npmjs.com/package/react-timer-hook)
