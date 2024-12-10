@@ -4,6 +4,7 @@ import styles from './stylesheets/App.module.css';
 import imageMapResize from 'image-map-resizer';
 import StartModal from './StartModal';
 import List from './List';
+import EndModal from './EndModal';
 
 function App() {
 	useEffect(() => {
@@ -16,7 +17,26 @@ function App() {
 	const [teddiursaCheck, setTeddiursaCheck] = useState(false);
 	const [qwilfishCheck, setqwilfishCheck] = useState(0);
 	const [caterpieCheck, setCaterpieCheck] = useState(0);
+	const [endModalOpen, setEndModalOpen] = useState(false);
 	const [checked, setChecked] = useState([]);
+
+	useEffect(() => {
+		if (
+			charmanderCheck &&
+			spearowCheck &&
+			teddiursaCheck &&
+			qwilfishCheck === 6 &&
+			caterpieCheck === 3
+		) {
+			setEndModalOpen(true);
+		}
+	}, [
+		charmanderCheck,
+		spearowCheck,
+		teddiursaCheck,
+		qwilfishCheck,
+		caterpieCheck,
+	]);
 
 	return (
 		<>
@@ -37,6 +57,8 @@ function App() {
 					caterpieCheck,
 				}}
 			/>
+
+			<EndModal open={endModalOpen} />
 			<div className={styles.container}>
 				<img
 					src={image1}
