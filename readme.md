@@ -11,7 +11,9 @@ Frontend: React
 
 Testing: Vitest, react-testing-library and jest-dom for react;
 
-How to build and run it locally (and possibly a link to a demo)
+How to build and run it locally
+
+Live Demo: https://poke-finderndk.netlify.app
 
 1. Prerequisites
    Ensure you have the following tools installed on your system:
