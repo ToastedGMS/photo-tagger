@@ -1,0 +1,28 @@
+@font-face {
+	font-family: pokemonSolid;
+	src: url('../assets/fonts/pokemon/pokemonSolid.ttf');
+}
+
+.mainDiv {
+	background-color: blue;
+	min-height: 100vh;
+	min-width: 100%;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+h1 {
+	font-family: pokemonSolid;
+	color: yellow;
+	letter-spacing: 0.2rem;
+}
+
+a {
+	text-decoration: none;
+	font-size: larger;
+	color: yellow;
+	font-weight: bold;
+	cursor: pointer;
+}
