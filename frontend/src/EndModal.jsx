@@ -10,6 +10,7 @@ export default function EndModal({ open, totalTime, onReset }) {
 	const [playerName, setPlayerName] = useState('');
 	const [leaderboard, setLeaderboard] = useState([]);
 	const [errorMessage, setErrorMessage] = useState('');
+	const [showLeaderboard, setShowLeaderboard] = useState(false);
 
 	const { seconds, minutes } = totalTime || { seconds: 0, minutes: 0 };
 	const timeInSeconds = minutes * 60 + seconds;
@@ -81,43 +82,77 @@ export default function EndModal({ open, totalTime, onReset }) {
 		<>
 			<div className={style.overlay} />
 			<div className={style.modal} role="dialog" aria-modal="true">
-				<h2>
-					{isHighScore
-						? `New High Score! You finished in ${formattedTime}!`
-						: `You finished in ${formattedTime}!`}
-				</h2>
-
-				{isHighScore && (
-					<div>
-						<input
-							type="text"
-							placeholder="Enter your name"
-							value={playerName}
-							onChange={(e) => setPlayerName(e.target.value)}
-							className={style.nameInput}
-						/>
-						<button onClick={saveHighScore} className={style.modalButton}>
-							Save High Score
+				{showLeaderboard ? (
+					<div className={style.leaderboard}>
+						<h2>Leaderboard</h2>
+						<table className={style.leaderboardTable}>
+							<thead>
+								<tr>
+									<th>Rank</th>
+									<th>Player</th>
+									<th>Time</th>
+								</tr>
+							</thead>
+							<tbody>
+								{leaderboard.map((entry, index) => (
+									<tr key={index}>
+										<td>{index + 1}</td>
+										<td>{entry.name}</td>
+										<td>{`${Math.floor(entry.time / 60)}:${String(
+											entry.time % 60
+										).padStart(2, '0')}`}</td>
+									</tr>
+								))}
+							</tbody>
+						</table>
+						<button
+							className={style.modalButton}
+							onClick={() => setShowLeaderboard(false)}
+						>
+							Back
 						</button>
 					</div>
+				) : (
+					<>
+						<h2>
+							{isHighScore
+								? `New High Score! You finished in ${formattedTime}!`
+								: `You finished in ${formattedTime}!`}
+						</h2>
+
+						{isHighScore && (
+							<div>
+								<input
+									type="text"
+									placeholder="Enter your name"
+									value={playerName}
+									onChange={(e) => setPlayerName(e.target.value)}
+									className={style.nameInput}
+								/>
+								<button onClick={saveHighScore} className={style.modalButton}>
+									Save High Score
+								</button>
+							</div>
+						)}
+
+						{errorMessage && <p className={style.error}>{errorMessage}</p>}
+
+						<div className={style.buttonDiv}>
+							<button
+								className={style.modalButton}
+								onClick={() => location.reload()}
+							>
+								Play Again
+							</button>
+							<button
+								className={style.modalButton}
+								onClick={() => setShowLeaderboard(true)}
+							>
+								View Leaderboards
+							</button>
+						</div>
+					</>
 				)}
-
-				{errorMessage && <p className={style.error}>{errorMessage}</p>}
-
-				<div className={style.buttonDiv}>
-					<button
-						className={style.modalButton}
-						onClick={() => location.reload()}
-					>
-						Play Again
-					</button>
-					<button
-						className={style.modalButton}
-						onClick={() => console.log(leaderboard)}
-					>
-						View Leaderboards
-					</button>
-				</div>
 			</div>
 		</>
 	);
