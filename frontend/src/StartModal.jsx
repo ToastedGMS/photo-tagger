@@ -22,9 +22,6 @@ export default function StartModal({ open, closeModal }) {
 					>
 						Start
 					</button>
-					<button className={style.modalButton} onClick={closeModal}>
-						View Leaderboards
-					</button>
 				</div>
 			</div>
 		</>
