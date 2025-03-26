@@ -1,59 +1,68 @@
-POcKEt-FINDER
+# POcKEt-FINDER
 
-This is an app designed to be ran as a game to tag characters in images. It employs
-techniques for tagging coordinates on an image and validating characters present (or not) on said coordinates.
+This is an app designed to be run as a game to tag characters in images. It employs techniques for tagging coordinates on an image and validating characters present (or not) on said coordinates.
 
-Technologies used
+## Technologies Used
 
-Backend: Supabase
+- **Backend**: Supabase
+- **Frontend**: React
+- **Other Dependencies**:
+  - `@supabase/supabase-js`
+  - `dotenv`
+  - `image-map-resizer`
+  - `react-router-dom`
+  - `react-timer-hook`
+- **Linting**: ESLint
 
-Frontend: React
+## How to Build and Run It Locally
 
-Testing: Vitest, react-testing-library and jest-dom for react;
+**Live Demo**: [https://poke-finderndk.netlify.app](https://poke-finderndk.netlify.app)
 
-How to build and run it locally
+### Prerequisites
 
-Live Demo: https://poke-finderndk.netlify.app
+Ensure you have the following tools installed on your system:
+- Node.js (version 16 or later recommended)
+- npm (comes with Node.js) or yarn
+- Git (to clone the repository)
 
-1. Prerequisites
-   Ensure you have the following tools installed on your system:
+### Clone the Repository
 
-Node.js (version 16 or later recommended),
-npm (comes with Node.js) or yarn,
-Git (to clone the repository)
+Navigate to the project directory:
 
-2. Clone the repository
+```bash
+cd photo-tagger/frontend
+```
+### Install Dependencies
+Run the following command to install the necessary dependencies:
 
-3. Navigate to the project directory
+```bash
+npm install
+```
+### Set Up Environment Variables
+Check the .env.example file for reference.
 
-run cd photo-tagger/frontend
+### Run the Server
+For the development server, run:
 
-4. Install dependencies
+```bash
+npm run dev
+```
+For the production version, run:
 
-run npm install
+```bash
+npm run build && npm run preview
+```
 
-5. Set up environment variables
+### Future Updates
+-Add more challenges
 
-Check the .env.example file for reference
+-Add more images
 
-6. Run the server
+-Add more Nintendo-owned creatures!
 
-run npm run dev for the development server or npm run build && npm run preview for the production version
+### Special Thanks
+- SHUBHAM from ShuDoCode for helping me with the image map logic, you're the GOAT! (His YT channel: https://www.youtube.com/@shudocode)
 
-How to run the tests
+- David J Brad Shaw for the image map resizer npm package, you're also the GOAT! (Repo: https://github.com/davidjbradshaw/image-map-resizer)
 
-To run the tests simply run the command "npm test"
-
-What I learned
-
-The main takeaway for me was to not overcomplicate things. Why would I build a full server and API to a simple single page game that doesnt require authentication or any other thing? Why would I manage a full ORM setup just for storing leaderboard info? Stick to keeping things simple, take it one step at a time. If you're stuck don't be scared to ask for help, to use npm packages that solve your problem, to simplify things and to think outside of the box. The goal is not to prove you're the greates programmer of all time, the goal is to get the problem solved efficiently and have the code shipped quick and with quality.
-
-What is still to do
-
-Add more challenges, more images, more nintendo owned creatures!
-
-Special thanks to SHUBHAM from ShuDoCode for helping me with the image map logic, you're the GOAT!
-(His YT channel: https://www.youtube.com/@shudocode)
-And to David J Brad Shaw for the image map resizer npm package, you're also the GOAT!
-(Repo: https://github.com/davidjbradshaw/image-map-resizer)
-Timer logic is handled by react-timer-hook (https://www.npmjs.com/package/react-timer-hook)
+- Timer logic is handled by react-timer-hook (npm package)
